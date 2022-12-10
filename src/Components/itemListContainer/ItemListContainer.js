@@ -2,17 +2,16 @@ import React from "react"
 import "../itemListContainer/itemListContainer.css"
 import { useEffect } from "react"
 import { useState } from "react"
-import Item from "../../item.js"
-const ItemListContainer = ( { greeting } ) => {
-   const [product,setproduct]=useState([])
+import ItemList from "../itemList/ItemList.js"
+const ItemListContainer = () => {
+   const [products,setproducts]=useState([])
    const [error,setError]=useState(null)
-   
    const [isPutPost, setPutPost] = useState (false)
   
    useEffect(()=>{
-        const getProducts = fetch('https://fakestoreapi.com/products?limit=15')
+         fetch('https://fakestoreapi.com/products?limit=15')
         .then(res=>res.json())
-        .then((res)=> setproduct(res))
+        .then((res)=> setproducts(res))
         .catch((err)=>setError(err))
     },[])
 
@@ -275,11 +274,12 @@ const ItemListContainer = ( { greeting } ) => {
 }
 
     return (
-  
       <div>
-<button onClick={ProductoPut}>Producto nuevo</button>
-<Item/>
-      </div>
+         <ItemList products={products}/>
+   
+     <button onClick={ProductoPut}>Producto nuevo</button>
+     </div>
+
     )
 }
 export default ItemListContainer

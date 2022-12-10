@@ -1,7 +1,7 @@
 import React from "react";
 
 import ItemListContainer from "../itemListContainer/ItemListContainer";
-
+import product from "../itemList/ItemList"
 const ItemDetailContainer = () => {
 
     return (
