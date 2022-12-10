@@ -1,0 +1,12 @@
+.navbar-container{
+display: flex;
+justify-content: space-around;
+
+}
+
+.links{
+    color: #FE54FF;
+    font-size: 2.5rem;
+    Font-family: Consolas, monaco, monospace;
+
+}

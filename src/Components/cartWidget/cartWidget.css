@@ -1,0 +1,11 @@
+.carrito{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.numero-carrito{
+  padding: 5%;
+ font-size: 20px;
+}
